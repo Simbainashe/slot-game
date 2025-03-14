@@ -1,34 +1,32 @@
 package com.cyberspeed;
 
-import java.util.List;
-
-public class StandardReward {
+public class BonusReward {
     private final  double reward;
 
-    private final List<SymbolPosition> rewardPositions;
+    private final SymbolPosition bonusSymbolPosition;
 
-    private StandardReward(double reward, List<SymbolPosition> rewardPositions) {
+    private BonusReward(double reward, SymbolPosition bonusSymbolPosition) {
         this.reward = reward;
-        this.rewardPositions = rewardPositions;
+        this.bonusSymbolPosition = bonusSymbolPosition;
     }
 
-    public static StandardReward of(double reward, List<SymbolPosition> rewardPositions) {
-        return new StandardReward(reward, rewardPositions);
+    public static BonusReward of(double reward, SymbolPosition bonusSymbolPosition) {
+        return new BonusReward(reward, bonusSymbolPosition);
     }
 
     public double getReward() {
         return reward;
     }
 
-    public List<SymbolPosition> getRewardPositions() {
-        return rewardPositions;
+    public SymbolPosition getBonusSymbolPosition() {
+        return bonusSymbolPosition;
     }
 
     @Override
     public String toString() {
-        return "StandardReward{" +
+        return "BonusReward{" +
                 "reward=" + reward +
-                ", rewardPositions=" + rewardPositions +
+                ", bonusSymbolPosition=" + bonusSymbolPosition +
                 '}';
     }
 }

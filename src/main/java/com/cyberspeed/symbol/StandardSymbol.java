@@ -1,19 +1,19 @@
-package com.cyberspeed;
+package com.cyberspeed.symbol;
 
-class StandardSymbol implements Symbol {
-    private final String name;
+class StandardSymbol extends AbstractSymbol {
+    private final double rewardMultiplier;
 
-    private StandardSymbol(String name) {
-        this.name = name;
+    private StandardSymbol(String name, double rewardMultiplier) {
+        super(name);
+        this.rewardMultiplier = rewardMultiplier;
     }
 
-    static StandardSymbol of(String name) {
-        return new StandardSymbol(name);
+    static StandardSymbol of(String name, double rewardMultiplier) {
+        return new StandardSymbol(name, rewardMultiplier);
     }
 
-    @Override
-    public String getName() {
-        return name;
+    public double getRewardMultiplier() {
+        return rewardMultiplier;
     }
 
     @Override

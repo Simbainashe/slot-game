@@ -1,5 +1,5 @@
-package com.cyberspeed;
+package com.cyberspeed.symbol;
 
 public interface BonusSymbol extends Symbol {
-    double apply(double finalReward);
+    double increaseFinalReward(double finalReward);
 }

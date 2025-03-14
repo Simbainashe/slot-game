@@ -1,26 +1,20 @@
 package com.cyberspeed.symbol;
 
-class RewardMultiplierBonusSymbol implements BonusSymbol {
-    private final String name;
+class FinalRewardMultiplierBonusSymbol extends AbstractSymbol implements BonusSymbol {
     private final double rewardMultiplier;
 
-    private RewardMultiplierBonusSymbol(String name, double rewardMultiplier) {
-        this.name = name;
+    private FinalRewardMultiplierBonusSymbol(String name, double rewardMultiplier) {
+       super(name);
         this.rewardMultiplier = rewardMultiplier;
     }
 
-    static RewardMultiplierBonusSymbol of(String name, double rewardMultiplier) {
-        return new RewardMultiplierBonusSymbol(name, rewardMultiplier);
+    static FinalRewardMultiplierBonusSymbol of(String name, double rewardMultiplier) {
+        return new FinalRewardMultiplierBonusSymbol(name, rewardMultiplier);
     }
 
     @Override
-    public double apply(double finalReward) {
+    public double increaseFinalReward(double finalReward) {
         return finalReward * rewardMultiplier;
-    }
-
-    @Override
-    public String getName() {
-        return name;
     }
 
     @Override
@@ -28,8 +22,4 @@ class RewardMultiplierBonusSymbol implements BonusSymbol {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return name;
-    }
 }

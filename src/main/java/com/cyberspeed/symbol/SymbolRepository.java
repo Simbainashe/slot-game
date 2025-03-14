@@ -1,4 +1,5 @@
 package com.cyberspeed.symbol;
 
-public interface SymbolsFactory {
+public interface SymbolRepository {
+    Symbol getSymbol(String name);
 }

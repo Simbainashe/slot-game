@@ -1,20 +1,18 @@
 package com.cyberspeed.symbol;
 
-class ExtraBonusSymbol extends AbstractSymbol implements BonusSymbol {
-    private final double extraBonus;
+class MissBonusSymbol extends AbstractSymbol implements BonusSymbol {
 
-    private ExtraBonusSymbol(String name, double extraBonus) {
+    private MissBonusSymbol(String name) {
         super(name);
-        this.extraBonus = extraBonus;
     }
 
-    static ExtraBonusSymbol of(String name, double extraBonus) {
-        return new ExtraBonusSymbol(name, extraBonus);
+    static MissBonusSymbol of(String name) {
+        return new MissBonusSymbol(name);
     }
 
     @Override
     public double increaseFinalReward(double finalReward) {
-        return finalReward + extraBonus;
+        return finalReward ;
     }
 
     @Override
