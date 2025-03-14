@@ -23,7 +23,7 @@ public class Main {
         JSONObject jsonObject = readJsonFile(filePath);
         SymbolRepository symbolRepository = JsonSymbolRepository.from(jsonObject);
         WinCombinationRepository winCombinationRepository = JsonWinCombinationRepository.from(jsonObject);
-        ReelRepository  reelRepository = JsonReelRepository.from(jsonObject);
+        ReelRepository  reelRepository = JsonReelRepository.from(jsonObject, symbolRepository);
         Map<BonusSymbol, Integer> bonusSymbolProbabilities = getBonusSymbolProbabilities(symbolRepository,jsonObject);
         Slot slot = SimpleSlot.of(reelRepository.getReels(), bonusSymbolProbabilities, winCombinationRepository.getWinCombinations());
         double betAmount = getBetAmount(args);
@@ -32,10 +32,12 @@ public class Main {
     }
 
     private static Map<BonusSymbol, Integer> getBonusSymbolProbabilities(SymbolRepository symbolRepository, JSONObject jsonObject) {
+        // add implementation
         return null;
     }
 
     private static double getBetAmount(String[] args) {
+        // add implementation
         return 0;
     }
 
@@ -53,6 +55,5 @@ public class Main {
             throw new IllegalArgumentException("Error reading config file: " + e.getMessage());
         }
     }
-
 
 }

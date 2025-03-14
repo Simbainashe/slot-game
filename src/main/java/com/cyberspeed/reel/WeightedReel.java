@@ -10,7 +10,7 @@ import java.util.Map;
 class WeightedReel implements Reel {
     private final List<List<Symbol>> positionsSymbols = new ArrayList<>();
 
-    public WeightedReel(List<Map<Symbol, Integer>> reelPositionsSymbolProbabilities) {
+    private WeightedReel(List<Map<Symbol, Integer>> reelPositionsSymbolProbabilities) {
         for (Map<Symbol, Integer> symbolProbability : reelPositionsSymbolProbabilities) {
             List<Symbol> positionSymbols = new ArrayList<>();
             for (Map.Entry<Symbol, Integer> symbolProbabilityEntry : symbolProbability.entrySet()) {
@@ -21,6 +21,10 @@ class WeightedReel implements Reel {
             this.positionsSymbols.add(positionSymbols);
         }
 
+    }
+
+    public static WeightedReel of(List<Map<Symbol, Integer>> reelPositionsSymbolProbabilities) {
+        return new WeightedReel(reelPositionsSymbolProbabilities);
     }
 
     @Override
