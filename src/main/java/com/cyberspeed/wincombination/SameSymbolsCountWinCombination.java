@@ -8,19 +8,21 @@ import java.util.Optional;
 class SameSymbolsCountWinCombination implements WinCombination {
     private final int count;
     private final  double rewardMultiplier;
+    private final String name;
 
-    private SameSymbolsCountWinCombination(int count, double rewardMultiplier) {
+    private SameSymbolsCountWinCombination(int count, double rewardMultiplier, String name) {
         this.count = count;
         this.rewardMultiplier = rewardMultiplier;
+        this.name = name;
     }
 
-    public static SameSymbolsCountWinCombination of(int count, double rewardMultiplier) {
-        return new SameSymbolsCountWinCombination(count, rewardMultiplier);
+    public static SameSymbolsCountWinCombination of(int count, double rewardMultiplier, String name) {
+        return new SameSymbolsCountWinCombination(count, rewardMultiplier, name);
     }
 
     @Override
     public String getName() {
-        return "";
+        return name;
     }
 
     @Override

@@ -10,19 +10,23 @@ import java.util.Optional;
 public class SameSymbolsPatternWinCombination implements WinCombination {
     private final List<List<Position>> patterns;
     private final  double rewardMultiplier;
+    private final String name;
 
-    private SameSymbolsPatternWinCombination(List<List<Position>> patterns, double rewardMultiplier) {
+
+    private SameSymbolsPatternWinCombination(List<List<Position>> patterns, double rewardMultiplier, String name) {
         this.patterns = patterns;
         this.rewardMultiplier = rewardMultiplier;
+        this.name = name;
     }
 
-    public static SameSymbolsPatternWinCombination of(List<List<Position>> patterns, double rewardMultiplier) {
-        return new SameSymbolsPatternWinCombination(patterns, rewardMultiplier);
+    public static SameSymbolsPatternWinCombination of(List<List<Position>> patterns, double rewardMultiplier,
+                                                      String name) {
+        return new SameSymbolsPatternWinCombination(patterns, rewardMultiplier, name);
     }
 
     @Override
     public String getName() {
-        return "";
+        return name;
     }
 
     @Override
