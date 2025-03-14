@@ -13,8 +13,8 @@ class ExtraBonusSymbol extends AbstractSymbol implements BonusSymbol {
     }
 
     @Override
-    public double increaseFinalReward(double finalReward) {
-        return finalReward + extraBonus;
+    public double calculateBonusReward(double finalReward) {
+        return extraBonus;
     }
 
     @Override

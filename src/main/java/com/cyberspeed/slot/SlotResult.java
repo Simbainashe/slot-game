@@ -1,4 +1,6 @@
-package com.cyberspeed;
+package com.cyberspeed.slot;
+
+import com.cyberspeed.BonusReward;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.cyberspeed;
+package com.cyberspeed.reel;
 
 import com.cyberspeed.symbol.Symbol;
 

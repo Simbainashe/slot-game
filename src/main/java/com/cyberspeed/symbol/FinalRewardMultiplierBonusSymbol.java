@@ -13,8 +13,13 @@ class FinalRewardMultiplierBonusSymbol extends AbstractSymbol implements BonusSy
     }
 
     @Override
-    public double increaseFinalReward(double finalReward) {
-        return finalReward * rewardMultiplier;
+    public double calculateBonusReward(double finalReward) {
+        return finalReward * (rewardMultiplier - 1);
+    }
+
+    @Override
+    public boolean isMiss() {
+        return false;
     }
 
     @Override

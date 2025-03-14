@@ -1,4 +1,4 @@
-package com.cyberspeed;
+package com.cyberspeed.slot;
 
 public interface Slot {
 

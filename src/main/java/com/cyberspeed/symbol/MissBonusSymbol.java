@@ -11,7 +11,7 @@ class MissBonusSymbol extends AbstractSymbol implements BonusSymbol {
     }
 
     @Override
-    public double increaseFinalReward(double finalReward) {
+    public double calculateBonusReward(double finalReward) {
         return finalReward ;
     }
 

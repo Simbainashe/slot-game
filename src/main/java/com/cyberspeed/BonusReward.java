@@ -1,5 +1,7 @@
 package com.cyberspeed;
 
+import com.cyberspeed.slot.SymbolPosition;
+
 public class BonusReward {
     private final  double reward;
 

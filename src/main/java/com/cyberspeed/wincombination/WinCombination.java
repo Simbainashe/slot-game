@@ -1,4 +1,7 @@
-package com.cyberspeed;
+package com.cyberspeed.wincombination;
+
+import com.cyberspeed.slot.SlotDisplayResult;
+import com.cyberspeed.slot.StandardReward;
 
 import java.util.Optional;
 
