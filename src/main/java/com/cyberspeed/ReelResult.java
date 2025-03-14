@@ -5,20 +5,14 @@ import com.cyberspeed.symbol.Symbol;
 import java.util.List;
 
 public class ReelResult {
-   private final int stopPosition;
    private final List<Symbol> symbols;
 
-    private ReelResult(int stopPosition, List<Symbol> symbols) {
-        this.stopPosition = stopPosition;
+    private ReelResult( List<Symbol> symbols) {
         this.symbols = symbols;
     }
 
-    public static ReelResult of(int stopPosition, List<Symbol> symbols) {
-        return new ReelResult(stopPosition, symbols);
-    }
-
-    public int getStopPosition() {
-        return stopPosition;
+    public static ReelResult of(List<Symbol> symbols) {
+        return new ReelResult(symbols);
     }
 
     public List<Symbol> getSymbols() {
@@ -28,7 +22,6 @@ public class ReelResult {
     @Override
     public String toString() {
         return "ReelResult{" +
-                "stopPosition=" + stopPosition +
                 ", symbols=" + symbols +
                 '}';
     }

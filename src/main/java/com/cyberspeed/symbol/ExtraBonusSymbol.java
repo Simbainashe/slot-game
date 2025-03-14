@@ -18,6 +18,11 @@ class ExtraBonusSymbol extends AbstractSymbol implements BonusSymbol {
     }
 
     @Override
+    public boolean isMiss() {
+        return false;
+    }
+
+    @Override
     public boolean isBonus() {
         return true;
     }
